@@ -12,6 +12,9 @@ const { v4: uuidv4 } = require('uuid');
 // now we have to specify the view engine as ejs
 app.set('view engine', 'ejs');
 
+// specifying that or public file will be here
+app.use( express.static('public')); 
+
 // first url that willbe going to hit -- localhost:3030 ; it is main router
 app.get('/', (req, res) => {
     res.redirect(`/${uuidv4()}`);
@@ -21,8 +24,7 @@ app.get('/', (req, res) => {
 app.get('/:room', (req, res) => {
     // below line say which file we want to render
     res.render('room', { roomId: req.params.room } /*this is parameter in which we will get room id*/);
-
-})
+});
 
 
 // specify on which port it will run
