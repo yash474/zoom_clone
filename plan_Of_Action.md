@@ -26,10 +26,12 @@ Prerequisite :
 
     - npm install uuid :: this we had installed because we have to generate unique room id
 
-    - Socket IO : we will use it to get real time comunication(audio/video) , it is real time engine
+    - Socket IO : we will use to create channel for real time comunication(audio/video) , it is real time engine
         so the diff b/w socket it and http is with http ; in hppt we as aclient only make request to server and server only responds but server cannot make request to us ::: whereas which socketIO we as well as server both can make request
         // so socketIO kind of create a channel for the communication 
 
         $ npm install socket.io
     
-    - we have install pear js
+    - we have to install webRTC :: webRTC allows the web browsers to communicate with each other in real time
+    - peer js :- it wraps webRTC implementation and makes it easy to use peep-to-peer connections 
+        npm install peer

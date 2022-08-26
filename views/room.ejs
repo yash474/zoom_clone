@@ -7,9 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoom_Clone</title>
     <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+
     <script>
         // here that "roomId" we r passing from server.js while rendering
-        console.log( " <%= roomId %>"); // this is ejs templeting 
+        const ROOM_ID =" <%= roomId %>"; // this is ejs templeting 
         </script>
 </head>
 <body>
